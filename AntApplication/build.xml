@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AntApplication">
+<target name="info" depends="clean,compile,package,deploy">
+<echo>My first ant application</echo>
+</target>
+
+<target name="clean">
+<echo>clean the build folder</echo>
+</target>
+
+<target name="compile">
+<echo>compile the java file</echo>
+<javac destdir="dist" srcdir="src"></javac>
+</target>
+
+<target name="package">
+<echo>it package the  class file</echo>
+<jar basedir="dist" destfile="build/myapplication.jar"></jar>
+</target>
+
+<target name="deploy">
+<echo>it deploy  application</echo>
+</target>
+</project>
